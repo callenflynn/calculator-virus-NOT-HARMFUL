@@ -3,12 +3,13 @@
 > A calculator REPL. Press Enter on an empty line to start a scripted
 > scare show. Windows only. Pure Python 3 stdlib.
 
-**Two editions are available:**
+**Three editions are available:**
 
 | File | Behavior |
 |------|----------|
 | `v3.py` | Safe edition. Restores everything after the show. Uses a watchdog. |
 | `v3-aftermath.py` | Aftermath edition. Does NOT clean up. Leaves the mess. |
+| `v4.py` | TOTAL RECALL edition. Aftermath with 10+ new scare effects. 30-min watchdog. |
 
 ## Files
 ### V2
@@ -18,34 +19,34 @@ v3.py - has watchdog, undoes all changes after time is up
 v3-aftermath.py - does not have watchdog, changes are annoying to undo
 
 All changes are reversible. A `finally` block and a detached watchdog
-process restore everything:
-
-- Wallpaper
-- Taskbar and Start button
-- Desktop icons and icon layout
-- Mouse buttons and cursor
-- Screen colors
-- Screen resolution
-- All `CAL_2_2_*` shortcuts and Downloads files are deleted
-
-The watchdog runs even if the main process is killed.
+process restore everything.
 
 ### v3-aftermath.py — Aftermath Edition
 
-**Does NOT clean up.** The victim wakes up to:
+**Does NOT clean up.** No watchdog. No finally block. No restore.
 
-- A scary wallpaper
-- 640×480 resolution
-- Inverted screen colors
-- Swapped mouse buttons
-- Hidden taskbar
-- 60 fake desktop shortcuts
-- 40 browser tabs open
-- 60 junk files in Downloads
-- 340+ cmd windows on screen
+### v4.py — TOTAL RECALL Edition
 
-No watchdog. No finally block. No restore. Run `v3.py` afterward
-to clean up, or restart the computer.
+Based on the aftermath edition. Adds 12 new scare effects:
+
+- **Screen rotation.** Flips the display 180° for 5 seconds.
+- **Window shuffle.** Scatters all open windows to random positions.
+- **Volume haunt.** Random mute/volume-up/volume-down keypresses.
+- **Sticky Keys trap.** Triggers the real Windows Sticky Keys prompt.
+- **Password expired.** Fake "change your password" fullscreen dialog.
+- **Discord ban.** Fake "banned from every server" screen.
+- **Selfie scare.** Screenshots the desktop and shows it as a live webcam feed.
+- **Reversed whisper.** Plays a backwards TTS voice message before the reveal.
+- **Activation watermark.** Persistent "Windows is not activated" overlay.
+- **Toast spam.** Fake Windows 11 notification toasts in the corner.
+- **BIOS update.** Fake firmware update stuck at 99%, then fails.
+- **Spy stats.** Reveal screen shows process count, tabs, and notes.
+
+Also:
+- Windows Update screen gets stuck at 99% before failing.
+- NSFW URLs replaced with SFW scary alternatives.
+- Watchdog fires after 30 minutes (1800 s) for automatic recovery.
+- Requests UAC admin on launch.
 
 ## SAFETY CONTRACT
 
@@ -69,8 +70,7 @@ exists.
 **Test on a VM first. Do not run on machines you do not own.**
 **Contains white flashes. Do not use with photosensitive persons.**
 
-**For maximal scare, run `v3-aftermath.py`. For a safe prank that
-cleans up, run `v3.py`.**
+**For maximal safe scare, run `v3.py`. For total aftermath, run `v4.py`.**
 
 ## How to Run
 
@@ -204,7 +204,7 @@ Edit the constants at the top of `v3.py`:
 | `TERMINAL_SPAM3` | 40 | cmd windows (1s timeout) |
 | `APP_SPAM` | 12 | Random apps opened |
 | `JUMPSCARE_S` | 9 | Jumpscare duration |
-| `WATCHDOG_S` | 600 | Watchdog delay (seconds) |
+| `WATCHDOG_S` | 600 / 1800 | Watchdog delay (v3=600s, v4=1800s) |
 | `NSFW_JOKES` | True | Adult browser tabs |
 
 ## Requirements
