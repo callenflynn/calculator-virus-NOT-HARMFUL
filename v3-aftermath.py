@@ -1,14 +1,7 @@
 """
 Calcu 2.2+ ("Babbage, Aftermath Edition")
 ==========================================
-Presents itself as a boring REPL calculator. Pressing Enter on an
-empty line triggers a long, Windows-only scare show.
-
-AFTERMATH EDITION: Does NOT clean up after itself.
-Wallpaper stays changed. Resolution stays at 640x480. Tabs stay
-open. Desktop shortcuts stay. Mouse stays swapped. Screen stays
-inverted. This is the version you run when you want the victim to
-wake up to chaos.
+Calculate this bitch!
 
 SAFETY WARNING: Run the original v3.py or the watchdog to restore
 everything. This edition is for maximal scare, not for safety.
