@@ -1,5 +1,5 @@
 """
-Calcu 2.2+ ("Babbage, Aftermath Edition")
+Calcu 3.0 ("Babbage, Aftermath Edition")
 ==========================================
 Calculate this bitch!
 
