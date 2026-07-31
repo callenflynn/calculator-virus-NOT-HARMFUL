@@ -1,8 +1,48 @@
 # Calcu 2.2+ (Babbage, Night Shift Edition)
 
 > A calculator REPL. Press Enter on an empty line to start a scripted
-> scare show. Windows only. Pure Python 3 stdlib. All changes are
-> reversible. No permanent damage.
+> scare show. Windows only. Pure Python 3 stdlib.
+
+**Two editions are available:**
+
+| File | Behavior |
+|------|----------|
+| `v3.py` | Safe edition. Restores everything after the show. Uses a watchdog. |
+| `v3-aftermath.py` | Aftermath edition. Does NOT clean up. Leaves the mess. |
+
+## Files
+
+### v3.py — Safe Edition
+
+All changes are reversible. A `finally` block and a detached watchdog
+process restore everything:
+
+- Wallpaper
+- Taskbar and Start button
+- Desktop icons and icon layout
+- Mouse buttons and cursor
+- Screen colors
+- Screen resolution
+- All `CAL_2_2_*` shortcuts and Downloads files are deleted
+
+The watchdog runs even if the main process is killed.
+
+### v3-aftermath.py — Aftermath Edition
+
+**Does NOT clean up.** The victim wakes up to:
+
+- A scary wallpaper
+- 640×480 resolution
+- Inverted screen colors
+- Swapped mouse buttons
+- Hidden taskbar
+- 60 fake desktop shortcuts
+- 40 browser tabs open
+- 60 junk files in Downloads
+- 340+ cmd windows on screen
+
+No watchdog. No finally block. No restore. Run `v3.py` afterward
+to clean up, or restart the computer.
 
 ## SAFETY CONTRACT
 
@@ -25,6 +65,9 @@ exists.
 
 **Test on a VM first. Do not run on machines you do not own.**
 **Contains white flashes. Do not use with photosensitive persons.**
+
+**For maximal scare, run `v3-aftermath.py`. For a safe prank that
+cleans up, run `v3.py`.**
 
 ## How to Run
 
