@@ -1,4 +1,4 @@
-# Calcu 2.2+ (Babbage, Night Shift Edition)
+# Calcu (Babbage, Night Shift Edition)
 
 > A calculator REPL. Press Enter on an empty line to start a scripted
 > scare show. Windows only. Pure Python 3 stdlib.
@@ -11,8 +11,11 @@
 | `v3-aftermath.py` | Aftermath edition. Does NOT clean up. Leaves the mess. |
 
 ## Files
-
-### v3.py — Safe Edition
+### V2
+v2.py - does not have watchdog, no permenant changes
+### v3
+v3.py - has watchdog, undoes all changes after time is up
+v3-aftermath.py - does not have watchdog, changes are annoying to undo
 
 All changes are reversible. A `finally` block and a detached watchdog
 process restore everything:
