@@ -1,38 +1,11 @@
 """
-Calcu 2.2+ ("Babbage, Night Shift Edition")
+Calcu 3.0 ("Babbage, Night Shift Edition")
 ============================================
-Presents itself as a boring REPL calculator. Pressing Enter on an
-empty line triggers a long, Windows-only scare show. Read the
-SAFETY CONTRACT below before letting it loose.
-
-SAFETY CONTRACT
----------------
-1. Nothing destructive is executed. No files are deleted, no
-   shutdown/format/rm commands run. Every scary line is text on a
-   canvas or a fake log entry. The fake cmd console and fake
-   ransomware never touch real data.
-2. Real system state changes (all reversible, all restored in a
-   finally block AND by a detached watchdog process):
-     - wallpaper (restored)
-     - taskbar / start button / desktop icons visibility (restored)
-     - mouse button swap and cursor visibility (restored)
-     - screen color inversion via the Magnification API (restored)
-     - temporary 640x480 resolution change, CDS flags = 0 so the
-       registry is never touched (restored from a saved DEVMODE)
-     - desktop icon layout: backed up to a .reg file, scrambled,
-       then restored via reg import + explorer restart
-     - ~30 fake desktop shortcuts (all prefixed CAL_2_2_ and
-       deleted on exit, even if the process dies)
-3. Browser tab flood: opens the default browser with a mix of
-   funny and embarrassing URLs. Tabs are NOT closed by the script
-   (closing someone's tabs would be worse). NSFW sites are behind
-   NSFW_JOKES below; flip it to False to remove them.
-4. The calculator core rejects anything that is not plain
-   arithmetic, so a victim cannot weaponize the REPL itself.
+Calculate this bitch!
 
 Notes:
 - No third-party dependencies. Pure stdlib + built-in Windows APIs.
-- Test on a VM first. Do not run on machines you do not own.
+- Do not run on machines you do not own.
 - Contains strobe-like white flashes. Skip for photosensitive people.
 """
 import ctypes
